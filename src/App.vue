@@ -1,20 +1,28 @@
 <template>
   <div id="app">
-    <Init/>
-    <Second/>
+    <HeaderC/>
+    <div id="main">
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+    </div>
+    <FooterComponent/>
   </div>
 </template>
 
 <script>
-import Init from './components/Init'
-import Second from './components/Second'
+
+import FooterComponent from './components/FooterComponent'
+import HeaderC from './components/HeaderC' 
+
+
 
 export default {
   name: 'App',
   components: {
-    Init,
-    Second
-  }
+    FooterComponent,
+    HeaderC,
+  },
 }
 </script>
 
@@ -25,6 +33,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+#main{
+  min-height: 800px;
 }
 </style>
