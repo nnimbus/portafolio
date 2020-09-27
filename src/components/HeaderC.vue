@@ -1,11 +1,6 @@
 <template>
-    <div class="container-fluid">
-        <span class=""><h2 class="text-dark pt-5">Nestor Vega | Desarrollador Web</h2></span>
-        <div class="btn-group">
-            <router-link to="/left"><button type="button" class="btn btn-info">Left</button></router-link>
-            <router-link to="/middle"><button type="button" class="btn btn-info">Middle</button></router-link>
-            <router-link to="/right"><button type="button" class="btn btn-info">Right</button></router-link>
-        </div>
+    <div class="container-fluid bg-light p-4">
+        <span class=""><h2 class="text-dark">Nestor Vega | Desarrollador Web</h2></span>
     </div>
 </template>
 

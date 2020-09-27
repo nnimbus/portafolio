@@ -2,9 +2,15 @@
   <div id="app">
     <HeaderC/>
     <div id="main">
-      <transition name="fade">
+      <div class="btn-group">
+        <router-link to="/left"><button type="button" class="btn btn-light">Left</button></router-link>
+        <router-link to="/middle"><button type="button" class="btn btn-light">Middle</button></router-link>
+        <router-link to="/right"><button type="button" class="btn btn-light">Right</button></router-link>
+      </div>
+      <transition name="slide-fade" mode="out-in">
         <router-view></router-view>
       </transition>
+
     </div>
     <FooterComponent/>
   </div>
@@ -14,7 +20,7 @@
 
 import FooterComponent from './components/FooterComponent'
 import HeaderC from './components/HeaderC' 
-
+// import Left from './components/Left'
 
 
 export default {
@@ -34,7 +40,16 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-#main{
-  min-height: 800px;
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
 }
 </style>
