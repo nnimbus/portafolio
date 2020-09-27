@@ -1,10 +1,9 @@
-var express = require('express')
 var mongoose = require('mongoose')
 const port = 3700
 var app = require('./app')
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017', {
+mongoose.connect('mongodb://localhost:27017/portafolio', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(()=>{
